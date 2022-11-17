@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import { render, h, VNode } from "preact";
-import Fresh from "fresh-start";
 import Component from "test";
 
 export function ReactPreactBridge() {
