@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<script type="module" src="../dist/index.umd.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><% preact.title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <style>
+      .preview {
+        width: 100%;
+        margin: 80px auto;
+        border: 1px dashed rgba(0, 0, 0, 0.2);
+        position: relative;
+        background-color: #00a9cd;
+        padding: 50px 15px;
+      }
+
+      .preview::before {
+        content: "WIDGET PREVIEW";
+        position: absolute;
+        display: block;
+        top: -18px;
+        font-size: 11px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div data-widget-host="habitat" class="preview">
+      <script type="text/props">
+        { "color": "red" }
+      </script>
+    </div>
+  </body>
+</html>
