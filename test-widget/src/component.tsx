@@ -1,14 +1,14 @@
 import { h, VNode } from "preact";
+import { useEffect, useState } from "preact/hooks";
 import { useForm, FormProvider } from "react-hook-form";
-import "./style.css";
+// import "./style.css";
 
-interface Props {
-  color?: string;
-}
-
-const App = (props: Props): VNode => {
-  console.log("helloo");
-
+export const App = (props): VNode => {
+  const [state, setState] = useState(false);
+  useEffect(() => {
+    setState(true);
+    console.log("helloo", state);
+  }, []);
   const formMethods = useForm({
     mode: "onChange",
   });
